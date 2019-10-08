@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameMgr : MonoBehaviour
 {
     [SerializeField] private LevelMgr LevelManager;
-    private static GameMgr instance  = null;
+    [HideInInspector] public static GameMgr instance  = null;
     private enum State {INIT, PLAY, OVER};
     private State m_State;
     void Awake()
@@ -44,7 +44,7 @@ public class GameMgr : MonoBehaviour
         switch (m_State)
         {
             case State.INIT:
-                // Singleton
+                // 
                 if (instance == null)
                     instance = this;
                 else if (instance != this)
@@ -58,7 +58,6 @@ public class GameMgr : MonoBehaviour
             break;
 
             case State.PLAY:
-                LevelManager.Start();
             break;
 
             case State.OVER:

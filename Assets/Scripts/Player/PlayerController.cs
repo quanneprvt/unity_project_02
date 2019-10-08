@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "Floor")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
         }
     }
 }

@@ -1,20 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelMgr : MonoBehaviour
 {
     [SerializeField] private int m_CurrentLevelIndex = 0;
-    [SerializeField] private LevelDefine m_Levels;
-    private static LevelMgr instance = null;
-    private enum State { INIT, PLAY};
+    [SerializeField] private GameLevel[] m_Levels;
+    private enum State { INIT, PLAY };
     private State m_State;
-    private Level m_CurrentLevel;
+    private GameLevel m_CurrentLevel;
     private bool m_IsPass = false;
+
+    /// <summary>
+    /// Awake is called when the script instance is being loaded.
+    /// </summary>
+    void Awake()
+    {
+        
+    }
     // Start is called before the first frame update
     public void Start()
     {
-        
+        _SetState(State.PLAY);
     }
 
     // Update is called once per frame
@@ -23,8 +31,8 @@ public class LevelMgr : MonoBehaviour
         switch (m_State)
         {
             case State.INIT:
-                if (m_CurrentLevel.IsPass())
-                    m_IsPass = true;
+                // if (m_CurrentLevel.IsPass())
+                //     m_IsPass = true;
             break;
 
             case State.PLAY:
@@ -53,16 +61,15 @@ public class LevelMgr : MonoBehaviour
         switch (m_State)
         {
             case State.INIT:
-                // Singleton
-                if (instance == null)
-                {
-                    instance = this;
-                    _SetLevel(m_CurrentLevelIndex);
-                }
+                //
+                SceneManager.LoadScene("Level_1", LoadSceneMode.Single);
+                // _SetLevel(m_CurrentLevelIndex);
                 //
             break;
 
             case State.PLAY:
+                GameObject gameObject = GameObject.Find("GameLevel");
+                // Debug.Log(gameObject);
             break;
         }
     }
