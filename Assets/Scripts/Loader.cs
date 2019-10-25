@@ -21,8 +21,8 @@ public class Loader : MonoBehaviour
             Instantiate(m_GameMgr);
         //Load Json
         TextAsset t = (TextAsset)AssetDatabase.LoadAssetAtPath("Assets/Scripts/LevelDefine/LevelDefine.json", typeof(TextAsset));
-        LevelObject<T> o = JsonUtility.FromJson<LevelObject<T>>(t.text);
-        Debug.Log(o.LevelDefine);
+        object o = Utils.FromJson<object>(t.text);
+        Debug.Log(o);
         DontDestroyOnLoad(gameObject);
     }
 }

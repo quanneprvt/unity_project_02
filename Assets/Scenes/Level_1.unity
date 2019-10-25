@@ -1618,6 +1618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
+  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -1678,7 +1679,7 @@ Light:
   m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 1e-45, y: 0, z: 0, w: -1.0742908e-12}
@@ -1699,6 +1700,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 49.971, y: -41.061, z: -33.705}
+--- !u!114 &705507996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da3f8396fc4f3d8478b3ae56ae4b3845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RotateAxis: {x: -1, y: -2.4, z: 67}
+  m_Speed: 5
 --- !u!1 &745843938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,11 +2115,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65af969212439df488d2307c46ae8393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Speed: {x: 0.15, y: 0, z: 0.15}
-  keyUp: 273
-  keyDown: 274
-  keyLeft: 276
-  keyRight: 275
+  m_Speed: {x: 0.35, y: 0, z: 0.35}
+  keyUp: 119
+  keyDown: 115
+  keyLeft: 97
+  keyRight: 100
 --- !u!1 &925875999
 GameObject:
   m_ObjectHideFlags: 0
@@ -6736,8 +6751,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121022966}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.610432, y: -25.58, z: 32.07}
-  m_LocalScale: {x: 952.0436, y: 1.1668506, z: 842.5079}
+  m_LocalPosition: {x: -14.610432, y: -25.67, z: 32.07}
+  m_LocalScale: {x: 952.0436, y: 0.22, z: 842.5079}
   m_Children: []
   m_Father: {fileID: 459022461}
   m_RootOrder: 0

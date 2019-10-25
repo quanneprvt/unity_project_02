@@ -62,7 +62,7 @@ public class LevelMgr : MonoBehaviour
         {
             case State.INIT:
                 //
-                SceneManager.LoadScene("Level_1", LoadSceneMode.Single);
+                SceneManager.LoadScene("Level_2", LoadSceneMode.Single);
                 // _SetLevel(m_CurrentLevelIndex);
                 //
             break;
